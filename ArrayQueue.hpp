@@ -62,6 +62,9 @@ class ArrayQueue : public Queue<T> {
 
         // determine if the queue is currently full
         bool isFull() const;
+
+        template <typename U>
+        friend ostream& operator<<(ostream &out, const ArrayQueue<U> &c);
 };
 
 #include "ArrayQueue.tpp"
